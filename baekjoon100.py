@@ -593,3 +593,47 @@
 ##print(chang_score)
 ##print(sang_score)
 ##
+##10214.
+##num = int(input())
+##result = []
+##for i in range(num):
+##    yonsei = 0
+##    korea = 0
+##    for j in range(9):
+##        yonsei_in, korea_in = map(int,input().split())
+##        if yonsei_in > korea_in:
+##            yonsei += 1
+##        elif yonsei_in < korea_in:
+##            korea += 1
+##    if yonsei > korea:
+##        result.append("Yonsei")
+##    elif yonsei < korea:
+##        result.append("Korea")
+##    elif yonsei == korea:
+##        result.append("Draw")
+##
+##for i in range(num):
+##    print(result[i])
+##
+##11557.
+##input_list = []
+##result = []
+##max_val = 0
+##T = int(input())
+##for i in range(T):
+##    N = int(input())
+##    max_val = 0
+##    temp_result = ""
+##    for j in range(N):
+##        name, count = input().split()
+##        count = int(count)
+##        if count > max_val:
+##            max_val = count
+##            temp_result = name
+##    result.append(temp_result)
+##for i in range(T):
+##    print(result[i])
+##
+##10757
+##a, b = map(int,input().split())
+##print(a+b)
