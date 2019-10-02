@@ -459,23 +459,137 @@
 ##        break
 ##print(bool_s)
 ##
-5086.
-case = []
-result = []
-i = 0
-while True:
-    case.append([])
-    input_data = input().split()
-    case[i].append(int(input_data[0]))
-    case[i].append(int(input_data[1]))
-    if not(case[i][1] and case[i][0]):
-        break;
-    elif case[i][1] / case[i][0] == case[i][1] // case[i][0]:
-        result.append("factor")
-    elif case[i][0] / case[i][1] == case[i][0] // case[i][1]:
-        result.append("multiple")
-    else:
-        result.append("neither")
-    i += 1
-for j in result:
-    print(j)
+##5086.
+##case = []
+##result = []
+##i = 0
+##while True:
+##    case.append([])
+##    input_data = input().split()
+##    case[i].append(int(input_data[0]))
+##    case[i].append(int(input_data[1]))
+##    if not(case[i][1] and case[i][0]):
+##        break;
+##    elif case[i][1] / case[i][0] == case[i][1] // case[i][0]:
+##        result.append("factor")
+##    elif case[i][0] / case[i][1] == case[i][0] // case[i][1]:
+##        result.append("multiple")
+##    else:
+##        result.append("neither")
+##    i += 1
+##for j in result:
+##    print(j)
+##
+##5717.
+##i = 0
+##result = []
+##while True:
+##    peo1, peo2 = map(int,input().split())
+##    if peo1 == 0 and peo2 == 0:
+##        break;
+##    result.append(peo1 + peo2)
+##    i += 1
+##for j in range(i):
+##    print(result[j])
+##
+##9610.
+##num = int(input())
+##Q1, Q2, Q3, Q4 = 0, 0, 0, 0
+##AXIS = 0
+##for i in range(num):
+##    dot0, dot1 = map(int,input().split())
+##    dot0 = int(dot0)
+##    dot1 = int(dot1)
+##    result = 0
+##    if dot0 == 0 or dot1 == 0:
+##        AXIS += 1
+##    elif dot0 > 0 and dot1 > 0:
+##        Q1 += 1
+##    elif dot0 < 0 and dot1 > 0:
+##        Q2 += 1
+##    elif dot0 < 0 and dot1 < 0:
+##        Q3 += 1
+##    elif dot0 > 0 and dot1 < 0:
+##        Q4 += 1
+##print(f"Q1: {Q1}")
+##print(f"Q2: {Q2}")
+##print(f"Q3: {Q3}")
+##print(f"Q4: {Q4}")
+##print(f"AXIS: {AXIS}")
+##
+##8958.
+##num = int(input())
+##result = []
+##for i in range(num):
+##    input_str = input()
+##    result.append(0)
+##    score = 0
+##    for j in range(len(input_str)):
+##        if input_str[j] == 'O':
+##            score += 1
+##            result[i] += score
+##        elif input_str[j] == 'X':
+##            score = 0
+##for i in range(num):
+##    print(result[i])
+##
+##9506.
+##result = []
+##n = []
+##i = 0
+##sum_val = 0
+##while True:
+##    result.append([])
+##    n.append(int(input()))
+##    if n[i] != -1:
+##        for j in range(1, n[i]//2 + 1):
+##            if n[i] // j == n[i] / j:
+##                result[i].append(j)
+##    else:
+##        break;
+##    i += 1
+##for j in range(i):
+##    sum_val = 0
+##    for k in result[j]:
+##        sum_val += k
+##    if n[j] == sum_val:
+##        print(f"{n[j]} = 1",end = '')
+##        for l in range(1,len(result[j])):
+##            print(f" + {result[j][l]}",end = '')
+##        print()
+##    else:
+##        print(f"{n[j]} is NOT perfect.")
+##
+##10162.
+##T = int(input())
+##A, B, C = 0, 0, 0
+##while True:
+##    if T // 300 >= 1:
+##        A = T // 300
+##        T = T - 300 * A
+##    elif T // 60 >= 1:
+##        B = T // 60
+##        T = T - 60 * B
+##    elif T // 10 >= 1:
+##        C = T // 10
+##        T = T - 10 * C
+##    if T < 10:
+##        break
+##if T == 0:
+##    print(f"{A} {B} {C}")
+##elif T != 0:
+##    print(-1)
+##
+##10103.
+##num = int(input())
+##sang_score = 100
+##chang_score = 100
+##for i in range(num):
+##    chang, sang = map(int,input().split())
+##    if sang > chang:
+##        chang_score -= sang
+##    elif sang < chang:
+##        sang_score -= chang
+##print(chang_score)
+##print(sang_score)
+##
