@@ -1,1 +1,301 @@
+"""
+# 15552
 
+import sys
+
+case = int(input())
+for i in range(case):
+    input1, input2 = map(int, sys.stdin.readline().split())
+    print(input1 + input2)
+"""
+
+"""
+# 2741
+
+num = int(input())
+for i in range(num):
+    print(i+1)
+"""
+
+"""
+# 2742
+
+num = int(input())
+for i in range(num,0,-1):
+    print(i)
+
+# -1
+
+a = int(input())
+for i in range(a):
+    print(a-i)    
+"""
+
+"""
+# 2438
+
+num = int(input())
+for i in range(1, num+1):
+    for j in range(i):
+        print("*", end = "")
+    print()
+
+# -1
+
+num = int(input())
+for i in range(1, num+1):
+    print("*" * i)
+"""
+
+"""
+# 2439
+
+num = int(input())
+
+for i in range(1, num+1):
+    print(" " * (num - i), end = "")
+    print("*" * i)
+
+"""
+
+"""
+# 10871
+
+case, com_num = map(int, input().split())
+
+in_list = input().split()
+result = []
+
+for i in range(case):
+    if int(in_list[i]) < com_num:
+        result.append(int(in_list[i]))
+
+for i in result:
+    print(i, end = " ")
+
+"""
+
+"""
+# 10952
+
+result = []
+while True: 
+    num1, num2 = map(int, input().split())
+    if num1 == 0 and num2 == 0:
+        break;
+    result.append(num1 + num2)
+        
+for i in result:
+    print(i)
+    
+"""
+
+"""
+# 10951
+
+while True:
+    try:
+        num1, num2 = map(int, input().split())
+    except:
+        break;
+    print(num1 + num2)
+"""
+
+"""
+# 1110
+
+num = int(input())
+tnum = num
+count = 1
+
+while True:
+    tnum = (tnum % 10 * 10) + ((tnum//10 + tnum%10)%10)
+    if tnum == num:
+        break;
+    count += 1
+print(count)
+"""
+
+"""
+# 10818
+
+num = int(input())
+in_list = input().split()
+max_num = -1000000
+min_num = 1000000
+
+for i in in_list:
+    if int(i) > max_num:
+        max_num = int(i)
+    if int(i) < min_num:
+        min_num = int(i)
+print(min_num, max_num)
+"""
+
+"""
+# 2562
+
+max_num = 0
+max_count = 0
+
+for i in range(9):
+    num = int(input())
+    if num > max_num:
+        max_num = num
+        max_count = i+1
+    
+print(max_num)
+print(max_count)
+"""
+
+"""
+#2920
+
+as_list = [1, 2, 3, 4, 5, 6, 7, 8]
+des_list = [8, 7, 6, 5, 4, 3, 2, 1]
+
+in_list = list(map(int, input().split()))
+
+
+if in_list == as_list:
+    print("ascending")
+elif in_list == des_list:
+    print("descending")
+else:
+    print("mixed")
+"""
+
+"""
+# 2577
+
+num1 = int(input())
+num2 = int(input())
+num3 = int(input())
+num = num1 * num2 * num3
+
+result = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+while num != 0:
+    result[num % 10] += 1
+    num = num // 10
+for i in result:
+    print(i)
+
+# -1
+
+num1 = int(input())
+num2 = int(input())
+num3 = int(input())
+num = num1 * num2 * num3
+num_list = list(str(num))
+for i in range(10):
+    num_count = num_list.count(str(i))
+    print(num_count)
+"""
+
+"""
+# 3052
+
+result = []
+for i in range(10):
+    result.append(int(input()) % 42)
+result = set(result)
+print(len(result))
+"""
+
+"""
+# 1546
+
+count_num = int(input())
+in_list = list(map(int, input().split()))
+max_num = max(in_list)
+for i in range(len(in_list)):
+    in_list[i] = in_list[i] / max_num * 100
+print(sum(in_list) / count_num)
+"""
+
+"""
+# 4344
+
+case = int(input())
+result = []
+count = 0
+
+for i in range(case):
+    t_list = list(map(int, input().split()))
+    avg = (sum(t_list) - t_list[0]) / t_list[0]
+    for j in range(1, t_list[0] + 1):
+        if t_list[j] > avg:
+            count += 1
+    print(str("%0.3f" % float(count/t_list[0]*100)) + "%")
+    count = 0
+"""
+
+"""
+# 15596
+
+def solve(a):
+    return sum(a)
+"""
+
+"""
+# 4673
+
+def d(n):
+    a = 0
+    for i in str(n):
+        a += int(i)
+    return int(n) + a
+
+
+result = set(range(1,10001))
+minus = set()
+for i in range(1, 10001):
+    minus.add(d(i))
+result = result - minus
+
+for i in sorted(result):
+    print(i)
+"""
+
+"""
+# 1065
+
+num = int(input()) # 정수 X
+count = 0
+for i in range(1, num+1):
+    if len(str(i)) >= 3:
+        if int(str(i)[2]) - int(str(i)[1]) == int(str(i)[1]) - int(str(i)[0]):
+            count += 1
+    else:
+        count += 1
+print(count)
+"""
+
+"""
+# 11654
+
+character = input()
+print(ord(character))
+"""
+
+"""
+# 11720
+
+num = int(input())
+temp = map(int, input())
+print(sum(temp))
+"""
+
+"""
+# 10809
+
+alpha = [-1] * 26
+input_str = input()
+for idx in range(len(input_str)):
+    if alpha[ord(input_str[idx]) - 97] == -1:
+        alpha[ord(input_str[idx]) - 97] = idx
+
+for i in range(0,26):
+    print(alpha[i],end = " ")
+"""
